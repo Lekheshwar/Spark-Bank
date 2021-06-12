@@ -5,14 +5,19 @@ app.use(bodyParse.json());
 const PORT = 5000;
 
 const customrerRouter = require('./routes/customers');
+const moneyTransferRouter = require('./routes/money-transfer');
+const transactionsRouter = require('./routes/transactions');
 
 
 app.use("/customers", customrerRouter);
-
+app.use("/money-transfer", moneyTransferRouter);
+app.use("/transactions", transactionsRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}.`)
 })
+
+
 // // HOME PAGE
 // app.get('/', (req, res) => {
 //     res.status(200).send("Home");
