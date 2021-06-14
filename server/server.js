@@ -1,13 +1,31 @@
 const express = require("express");
-const bodyParse = require('body-parser');
 const app = express();
-app.use(bodyParse.json());
+const mongoose = require("mongoose");
+
+app.use(express.json());
+require("dotenv").config();
+
 const PORT = 5000;
+const URI = process.env.ATLAS;
+
+mongoose.connect(URI, {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
+});
+
+const connection = mongoose.connection;
+connection.once("open", (req, res) => {
+  console.log("MongoDB database connection estd succesfully!!");
+});
+
 
 const customrerRouter = require('./routes/customers');
 const moneyTransferRouter = require('./routes/money-transfer');
 const transactionsRouter = require('./routes/transactions');
 
+
+// Hsm92aUSd5J1D7aD dbUser
 
 app.use("/customers", customrerRouter);
 app.use("/money-transfer", moneyTransferRouter);
@@ -18,28 +36,3 @@ app.listen(PORT, () => {
 })
 
 
-// // HOME PAGE
-// app.get('/', (req, res) => {
-//     res.status(200).send("Home");
-// })
-
-// // CUSTOMERS LIST
-// app.get('/customers-list', (req, res) => {
-//     res.status(200).send(customers);
-// })
-
-// // ADD NEW USER
-// app.post('/add-user', (req, res) => {
-//     console.log(req.body);
-//     res.send("done");
-// })
-
-// // MONEY TRANSFER
-// app.get('/money-transfer', (req, res) => {
-//     res.status(200).send("Called money transfer");
-// })
-
-// // 404 PAGE
-// app.get('*', (req, res) => {
-//     res.status(404).send("Welcome to no where!!");
-// })
