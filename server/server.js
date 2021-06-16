@@ -12,6 +12,7 @@ mongoose.connect(URI, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
+  useFindAndModify: false 
 });
 
 const connection = mongoose.connection;
@@ -34,5 +35,3 @@ app.use("/transactions", transactionsRouter);
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}.`)
 })
-
-
