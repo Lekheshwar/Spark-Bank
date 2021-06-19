@@ -1,0 +1,45 @@
+.left {
+  width: 50vw;
+  height: 80vh;
+}
+.svg-image {
+  width: 50vw;
+  height: 80vh;
+}
+
+.intro {
+  font-size: 25px;
+}
+
+.big {
+  font-weight: 900;
+  font-size: 55px;
+}
+
+.medium {
+  font-weight: 700;
+  font-size: 45px;
+}
+.service {
+  width: 100%;
+}
+
+.my-card {
+  margin: 0 2%;
+  max-width: 30%;
+}
+
+.card-img {
+  width: 25vw;
+  height: 35vh;
+}
+
+.card-text {
+  margin-top: 8%;
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
+}
+
+.btn {
+  border-radius: 50px;
+}
