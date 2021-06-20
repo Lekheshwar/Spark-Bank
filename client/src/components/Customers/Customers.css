@@ -4,9 +4,5 @@
 }
 
 .main {
-  height: 80vh;
-}
-
-.tables {
-  width: 80%;
+  min-height: 80vh;
 }

@@ -10,7 +10,7 @@ import MoneyTransfer from "./components/Money-Transfer/MoneyTransfer";
 
 function App() {
   return (
-    <>
+    <div className="app">
       <NavBar />
       <Switch>
         <Route exact path="/" component={Home} />
@@ -19,7 +19,7 @@ function App() {
         <Route exact path="/Money-Transfer" component={MoneyTransfer} />
       </Switch>
       <Footer />
-    </>
+    </div>
   );
 }
 

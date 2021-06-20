@@ -9,7 +9,7 @@ export default function NavBar() {
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container-fluid">
             <NavLink className="navbar-brand" to="/">
-              T-Bank
+              Spark Bank
             </NavLink>
             <button
               className="navbar-toggler"

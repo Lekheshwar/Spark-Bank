@@ -1,8 +1,6 @@
 const router = require("express").Router();
 const Customer = require("../models/customer.model");
 
-let Customers = require("../data").data;
-
 router.route("/").get((req, res) => {
   Customer.find()
     .then((customer) => res.json(customer))

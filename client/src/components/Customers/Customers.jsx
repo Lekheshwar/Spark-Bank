@@ -11,20 +11,19 @@ export default class Customers extends Component {
     axios
       .get("http://localhost:5000/customers")
       .then((res) => {
-        console.log(res);
+        res.data.sort();
         this.setState({ customers: res.data });
-        console.log(this.state);
       })
       .catch((err) => console.log(err));
   }
 
   render() {
     return (
-      <div className="container-fluid main my-4 d-flex flex-column align-items-center">
+      <div className="container-fluid main w-75 my-4 d-flex flex-column align-items-center">
         <div className="top p-4 d-flex justify-content-center">
           Our Customers
         </div>
-        <div className="tables">
+        <div className="tables w-100">
           <table class="table table-striped table-hover">
             <thead>
               <tr>

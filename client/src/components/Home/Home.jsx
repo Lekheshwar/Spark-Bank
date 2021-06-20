@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./Home.css";
 import logo from "../../images/banking.svg";
 import moneytranseferlogo from "../../images/moneytransfer.svg";
@@ -10,7 +11,7 @@ export default function Home() {
     <>
       <div className="container-fluid py-1">
         <div className="col">
-          <div className="main d-flex justify-content-between">
+          <div className="d-flex justify-content-between">
             <div className="left d-flex justify-content-center align-items-center">
               <p className="intro">
                 <p className="big">Security comes first.</p>
@@ -33,9 +34,12 @@ export default function Home() {
                     money with <strong> ₹0.00</strong> service charges.
                   </div>
                   <div className="d-flex my-2 justify-content-center">
-                    <button type="button" class="btn btn-outline-primary">
+                    <NavLink
+                      className="text-decoration-none btn btn-outline-primary"
+                      to="/Money-Transfer"
+                    >
                       Transfer Money
-                    </button>
+                    </NavLink>
                   </div>
                 </div>
               </div>
@@ -47,9 +51,12 @@ export default function Home() {
                     transactions.
                   </div>
                   <div className="d-flex my-2 justify-content-center">
-                    <button type="button" class="btn btn-outline-primary">
+                    <NavLink
+                      className="text-decoration-none btn btn-outline-primary"
+                      to="/Customers"
+                    >
                       Our Customers
-                    </button>
+                    </NavLink>
                   </div>
                 </div>
               </div>
@@ -61,9 +68,12 @@ export default function Home() {
                     all your transactions at a single place.
                   </div>
                   <div className="d-flex my-2 justify-content-center">
-                    <button type="button" class="btn btn-outline-primary">
-                      View Transactions
-                    </button>
+                    <NavLink
+                      className="text-decoration-none btn btn-outline-primary"
+                      to="/Transactions"
+                    >
+                      Transactions
+                    </NavLink>
                   </div>
                 </div>
               </div>

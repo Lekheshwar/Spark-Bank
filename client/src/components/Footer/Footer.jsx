@@ -4,7 +4,7 @@ import "./Footer.css";
 export default function Footer() {
   return (
     <footer className="d-flex align-items-center justify-content-center">
-      Copyright © The Spark Foundation 2021. All rights reserved.
+      Copyright © Spark Bank 2021. All rights reserved.
     </footer>
   );
 }

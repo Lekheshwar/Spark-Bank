@@ -25,8 +25,6 @@ const customrerRouter = require("./routes/customers");
 const moneyTransferRouter = require("./routes/money-transfer");
 const transactionsRouter = require("./routes/transactions");
 
-// Hsm92aUSd5J1D7aD dbUser
-
 app.use("/customers", customrerRouter);
 app.use("/money-transfer", moneyTransferRouter);
 app.use("/transactions", transactionsRouter);

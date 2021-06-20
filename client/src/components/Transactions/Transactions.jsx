@@ -19,7 +19,7 @@ export default class Transactions extends Component {
   getTimeDate(date) {
     const currentDate = new Date(date);
     const currentDayOfMonth = currentDate.getDate();
-    const currentMonth = currentDate.getMonth(); // Be careful! January is 0, not 1
+    const currentMonth = currentDate.getMonth();
     const currentYear = currentDate.getFullYear();
 
     const dateString =
@@ -35,11 +35,11 @@ export default class Transactions extends Component {
 
   render() {
     return (
-      <div className="container-fluid main my-4 d-flex flex-column align-items-center">
+      <div className="container-fluid main w-75 my-4 d-flex flex-column align-items-center">
         <div className="top p-4 d-flex justify-content-center">
           Transactions History
         </div>
-        <div className="tables">
+        <div className="tables w-100">
           <table class="table table-hover">
             <thead>
               <tr>
@@ -53,7 +53,7 @@ export default class Transactions extends Component {
               </tr>
             </thead>
             <tbody>
-              {this.state.transactions.map((transaction) => (
+              {this.state.transactions.reverse().map((transaction) => (
                 <tr
                   className={
                     transaction.status === "Success"
