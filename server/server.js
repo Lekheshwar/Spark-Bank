@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 
 app.use(express.json());
+app.use(require("cors")());
 require("dotenv").config();
 
 const PORT = 5000;
@@ -12,7 +13,7 @@ mongoose.connect(URI, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
-  useFindAndModify: false 
+  useFindAndModify: false,
 });
 
 const connection = mongoose.connection;
@@ -20,11 +21,9 @@ connection.once("open", (req, res) => {
   console.log("MongoDB database connection estd succesfully!!");
 });
 
-
-const customrerRouter = require('./routes/customers');
-const moneyTransferRouter = require('./routes/money-transfer');
-const transactionsRouter = require('./routes/transactions');
-
+const customrerRouter = require("./routes/customers");
+const moneyTransferRouter = require("./routes/money-transfer");
+const transactionsRouter = require("./routes/transactions");
 
 // Hsm92aUSd5J1D7aD dbUser
 
@@ -33,5 +32,5 @@ app.use("/money-transfer", moneyTransferRouter);
 app.use("/transactions", transactionsRouter);
 
 app.listen(PORT, () => {
-  console.log(`Server is running on ${PORT}.`)
-})
+  console.log(`Server is running on ${PORT}.`);
+});

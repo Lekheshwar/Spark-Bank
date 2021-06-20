@@ -1,11 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "./NavBar.css";
 
 export default function NavBar() {
   return (
     <div className="container-fluid">
       <div className="row">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container-fluid">
             <NavLink className="navbar-brand" to="/">
               T-Bank
@@ -25,13 +26,9 @@ export default function NavBar() {
               className="collapse navbar-collapse justify-content-end"
               id="navbarSupportedContent"
             >
-              <ul className="navbar-nav ml-auto mb-2 mb-lg-0 ">
+              <ul className="navbar-nav ml-auto mb-lg-0 ">
                 <li className="nav-item">
-                  <NavLink
-                    className="nav-link active"
-                    aria-current="page"
-                    to="/"
-                  >
+                  <NavLink className="nav-link" to="/">
                     Home
                   </NavLink>
                 </li>

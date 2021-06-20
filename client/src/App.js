@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
+import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import Customers from "./components/Customers/Customers";
 import Transactions from "./components/Transactions/Transactions";
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/Transactions" component={Transactions} />
         <Route exact path="/Money-Transfer" component={MoneyTransfer} />
       </Switch>
+      <Footer />
     </>
   );
 }
